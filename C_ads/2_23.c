@@ -31,16 +31,16 @@
 //}
 
 
-int main()
-{
-    int i, j, a[11][11] = { 0,1 };
-    for (i = 1; i <= 10; i++)
-    {
-        for (j = 1; j <= i; j++)
-        {
-            a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
-            printf("%d ", a[i][j]);
-        }
-        printf("\n");
-    }
-}
+//int main()
+//{
+//    int i, j, a[11][11] = { 0,1 };
+//    for (i = 1; i <= 10; i++)
+//    {
+//        for (j = 1; j <= i; j++)
+//        {
+//            a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+//            printf("%d ", a[i][j]);
+//        }
+//        printf("\n");
+//    }
+//}
