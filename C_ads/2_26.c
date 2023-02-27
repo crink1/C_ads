@@ -28,32 +28,32 @@
 //	return 0;
 //}
 
-void find(int arr[3][3], int row, int col, int n)
-{
-	int x = 0;
-	int y = col - 1;
-	while (x<row && y>=0)
-	{
-		if (arr[x][y] == n)
-		{
-			printf("下标为(%d,%d)\n", x, y);
-			break;
-		}
-		else if (arr[x][y] > n)
-		{
-			y--;
-		}
-		else
-		{
-			x++;
-		}
-	}
-}
-
-int main()
-{
-	int arr[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-	find(arr, 3, 3, 7);
-	
-	return 0;
-}
+//void find(int arr[3][3], int row, int col, int n)
+//{
+//	int x = 0;
+//	int y = col - 1;
+//	while (x<row && y>=0)
+//	{
+//		if (arr[x][y] == n)
+//		{
+//			printf("下标为(%d,%d)\n", x, y);
+//			break;
+//		}
+//		else if (arr[x][y] > n)
+//		{
+//			y--;
+//		}
+//		else
+//		{
+//			x++;
+//		}
+//	}
+//}
+//
+//int main()
+//{
+//	int arr[3][3] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+//	find(arr, 3, 3, 7);
+//	
+//	return 0;
+//}
