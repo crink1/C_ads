@@ -1,5 +1,5 @@
 //#include<stdio.h>
-//char* my_strcop(char* arr1,const char* arr2)
+//char* my_strcpy(char* arr1,const char* arr2)
 //{
 //	char* tmp = arr1;
 //	while (*arr1++ = *arr2++)
