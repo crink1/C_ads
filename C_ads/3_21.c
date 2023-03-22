@@ -26,17 +26,17 @@
 //#define PLAY 1
 
 
-enum OPTION
-{
-	EXIT,
-	PLAY,
-	ADD,
-	DEL
-};
-
-int main()
-{
-	enum OPTION op = EXIT;
-	int arr[PLAY];
-
-	return 0;
+//enum OPTION
+//{
+//	EXIT,
+//	PLAY,
+//	ADD,
+//	DEL
+//};
+//
+//int main()
+//{
+//	enum OPTION op = EXIT;
+//	int arr[PLAY];
+//
+//	return 0;
