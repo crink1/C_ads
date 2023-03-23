@@ -1,32 +1,65 @@
 #include"contact.h"
 
+//void Initcontect(Contect* pc)
+//{
+//	pc->sz = 0;
+//	memset(pc->date, 0, sizeof(pc->date));
+//}
 void Initcontect(Contect* pc)
 {
+	pc->capacity = DEFOULT_SZ;
 	pc->sz = 0;
-	memset(pc->date, 0, sizeof(pc->date));
+	PeoInfo* tmp = (PeoInfo*)malloc(DEFOULT_SZ * sizeof(PeoInfo));
+	if (tmp == NULL)
+	{
+		printf("%s\n", strerror(errno));
+		return;
+	}
+	pc->date = tmp;
 }
 
+int Cheakcapacity(Contect* pc)
+{
+	if ( pc->capacity== pc->sz)
+	{
+		PeoInfo* tmp = (PeoInfo*)realloc(pc->date, (pc->capacity + INC_SZ) * sizeof(PeoInfo));
+		if (tmp == NULL)
+		{
+			printf("%s\n", strerror(errno));
+			return 0;
+		}
+		else
+		{
+			pc->date = tmp;
+			pc->capacity += INC_SZ;
+			return 1;
+		}
+	}
+	return 1;
+}
 
 void Addcontect(Contect* pc)
 {
-	if (MAX == pc->sz)
+	if (0 == Cheakcapacity(pc))
 	{
-		printf("通讯录已满\n");
+		printf("扩容失败\n");
 		return;
 	}
-	printf("姓名：\n");
-	scanf("%s", pc->date[pc->sz].name);
-	printf("年龄：\n");
-	scanf("%d", &pc->date[pc->sz].age);
-	printf("性别：\n");
-	scanf("%s", pc->date[pc->sz].sex);
-	printf("电话：\n");
-	scanf("%s", pc->date[pc->sz].tele);
-	printf("地址：\n");
-	scanf("%s", pc->date[pc->sz].addr);
-	printf("添加成功\n");
-	pc->sz++;
-
+	else
+	{
+		printf("姓名：\n");
+		scanf("%s", pc->date[pc->sz].name);
+		printf("年龄：\n");
+		scanf("%d", &pc->date[pc->sz].age);
+		printf("性别：\n");
+		scanf("%s", pc->date[pc->sz].sex);
+		printf("电话：\n");
+		scanf("%s", pc->date[pc->sz].tele);
+		printf("地址：\n");
+		scanf("%s", pc->date[pc->sz].addr);
+		printf("添加成功\n");
+		pc->sz++;
+	}
 }
 
 
@@ -111,4 +144,14 @@ void Sortcontect(Contect* pc)
 {
 	qsort(pc->date, pc->sz, sizeof(PeoInfo), my_qsotr_name);
 	printf("排序成功\n");
+}
+
+
+
+void Destroycontect(Contect* pc)
+{
+	pc->capacity = 0;
+	pc->sz = 0;
+	free(pc->date);
+	pc->date = NULL;
 }
