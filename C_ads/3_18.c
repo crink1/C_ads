@@ -1,29 +1,29 @@
 #include<stdio.h>
-
-//void* my_memcpy(void *arr2, void *arr, size_t num)
+#include<string.h>
+//void* my_memcpy(void *dst, void *src, size_t num)
 //{
-//	void* tmp = arr2;
+//	void* tmp = dst;
 //	while (num--)
 //	{
-//		*(char*)arr2 = *(char*)arr;
-//		arr2 = (char*)arr2 + 1;
-//		arr = (char*)arr + 1;
+//		*(char*)dst = *(char*)src;
+//		dst = (char*)dst + 1;
+//		src = (char*)src + 1;
 //
 //	}
 //	return tmp;
 //}
 
 
-//void* my_memmove(void *arr2, void *arr, size_t num)
+//void* my_memmove(void *dst, void *src, size_t num)
 //{
-//	char* tmp = arr2;
-//	if (arr2 < arr)
+//	char* tmp = dst;
+//	if (dst < src)
 //	{
 //		while (num--)
 //				{
-//					*(char*)arr2 = *(char*)arr;
-//					arr2 = (char*)arr2 + 1;
-//					arr = (char*)arr + 1;
+//					*(char*)dst = *(char*)src;
+//					dst = (char*)dst + 1;
+//					src = (char*)src + 1;
 //			
 //				}
 //				
@@ -32,7 +32,7 @@
 //	{
 //		while (num--)
 //		{
-//			*((char*)arr2+num) = *((char*)arr+num);
+//			*((char*)dst+num) = *((char*)src+num);
 //
 //		}
 //	}
@@ -42,13 +42,24 @@
 //
 //int main()
 //{
-//	int arr[] = { 1,2,3,4,5,6,7,8,9,0 };
-//	int arr2[30];
-//	/*my_memcpy(arr2, arr, 20);*/
-//	my_memmove(arr + 2, arr, 20);
+//	int src[] = { 1,2,3,4,5,6,7,8,9,0 };
+//	int dst[30];
+//	/*my_memcpy(dst, src, 20);*/
+//	my_memmove(src + 2, src, 20);
 //	for (int i = 0; i < 10; i++)
 //	{
-//		printf("%d ", arr[i]);
+//		printf("%d ", src[i]);
 //	}
 //	return 0;
 //}
+
+
+int main()
+{
+	char src[] = "abcdef";
+	char dst[30];
+	memcpy(dst, src, strlen(src) + 1);
+	printf("%s\n", src);
+	printf("%s\n", dst);
+	return 0;
+}
