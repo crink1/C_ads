@@ -53,13 +53,13 @@
 //	return 0;
 //}
 
-
-int main()
-{
-	char src[] = "abcdef";
-	char dst[30];
-	memcpy(dst, src, strlen(src) + 1);
-	printf("%s\n", src);
-	printf("%s\n", dst);
-	return 0;
-}
+//
+//int main()
+//{
+//	char src[] = "abcdef";
+//	char dst[30];
+//	memmove(dst, src, strlen(src) + 1);
+//	printf("%s\n", src);
+//	printf("%s\n", dst);
+//	return 0;
+//}
