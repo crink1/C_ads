@@ -36,6 +36,7 @@ int main()
 		switch(input)
 		{
 			case EXIT:
+				Savecontect(&con);
 				Destroycontect(&con);
 				break;
 			case ADD:

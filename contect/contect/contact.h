@@ -26,7 +26,7 @@ typedef struct PeoInfo
 typedef struct Contect
 {
 	int sz;
-	PeoInfo* date;
+	PeoInfo* data;
 	int capacity;
 }Contect;
 
@@ -46,3 +46,5 @@ void Modifycontect(Contect* pc);
 void Sortcontect(Contect* pc);
 
 void Destroycontect(Contect* pc);
+
+void Savecontect(Contect* pc);
