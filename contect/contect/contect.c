@@ -6,7 +6,7 @@
 //	memset(pc->data, 0, sizeof(pc->data));
 //}
 
-int Cheakcapacity(Contect* pc)
+int checkcapacity(Contect* pc)
 {
 	if (pc->capacity == pc->sz)
 	{
@@ -31,19 +31,18 @@ void Readcontect(Contect* pc)
 	FILE* pf = fopen("text.dat", "rb");
 	if (pf == NULL)
 	{
-		perror("LoadContact::fopen");
+		perror("ReadContact::fopen");
 		return;
 	}
-	//读文件
+
 	PeoInfo tmp = { 0 };
 	while (fread(&tmp, sizeof(PeoInfo), 1, pf))
 	{
-		Cheakcapacity(pc);
+		checkcapacity(pc);
 		pc->data[pc->sz] = tmp;
 		pc->sz++;
 	}
 
-	//关闭文件
 	fclose(pf);
 	pf = NULL;
 }
@@ -68,7 +67,7 @@ void Initcontect(Contect* pc)
 
 void Addcontect(Contect* pc)
 {
-	if (0 == Cheakcapacity(pc))
+	if (0 == checkcapacity(pc))
 	{
 		printf("扩容失败\n");
 		return;

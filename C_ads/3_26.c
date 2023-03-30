@@ -59,15 +59,15 @@
 //	return 0;
 //}
 
-union Un
-{
-    char c;
-    int i;
-};
-int main()
-{
-    union Un un;//定义
-    un.i = 1;
-    printf("%d", un.c);
-    return 0;
-}
+//union Un
+//{
+//    char c;
+//    int i;
+//};
+//int main()
+//{
+//    union Un un;//定义
+//    un.i = 1;
+//    printf("%d", un.c);
+//    return 0;
+//}
