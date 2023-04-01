@@ -89,45 +89,45 @@
 
 #include<assert.h>
 
-int my_atoi(const char* strs)
-{
-	assert(strs != NULL);
-	const char* tmp = strs;
-	int num = 0;
-	int i = 0;
-	while (*tmp != '\0')
-	{
-		if (' ' == (*tmp))
-		{
-			tmp++;
-		}
-		else
-		{
-			break;
-		}
-	}
-
-	while (*tmp != '\0')
-	{
-		if ((*tmp) > '0' && (*tmp) < '9')
-		{
-			num = num * 10 + (int)((*tmp) - '0');
-			tmp++;
-		}
-		else
-		{
-			return num;
-		}
-		
-	}
-	return num;
-}
-
-int main()
-{
-	char strs[] = "   123a56";
-	int dst = 0;
-	dst = my_atoi(strs);
-	printf("%d\n", dst);
-	return 0;
-}
+//int my_atoi(const char* strs)
+//{
+//	assert(strs != NULL);
+//	const char* tmp = strs;
+//	int num = 0;
+//	int i = 0;
+//	while (*tmp != '\0')
+//	{
+//		if (' ' == (*tmp))
+//		{
+//			tmp++;
+//		}
+//		else
+//		{
+//			break;
+//		}
+//	}
+//
+//	while (*tmp != '\0')
+//	{
+//		if ((*tmp) > '0' && (*tmp) < '9')
+//		{
+//			num = num * 10 + (int)((*tmp) - '0');
+//			tmp++;
+//		}
+//		else
+//		{
+//			return num;
+//		}
+//		
+//	}
+//	return num;
+//}
+//
+//int main()
+//{
+//	char strs[] = "   123a56";
+//	int dst = 0;
+//	dst = my_atoi(strs);
+//	printf("%d\n", dst);
+//	return 0;
+//}
