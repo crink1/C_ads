@@ -1,47 +1,52 @@
-#include<stdio.h>
-//#define MAX 1000
+//#include<stdio.h>
+//#define N 4
+//
+//#define Y(n) ((N+2)*n) 
+//
 //
 //int main()
 //{
-//	printf("%d\n", MAX);
-//	int arr[MAX];
-//
-//	return 0;
+//    int z = 2 * (N + Y(5 + 1));
+//    printf("%d", z);
+//    return 0;
 //}
-
-//#define DEBUG_PRINT printf("file:%s\tline:%d\t date:%s\ttime:%s\n" , \
-//						__FILE__,__LINE__ , \
-//						__DATE__,__TIME__ ) 
-//续行符
-
-//#define MAX 1000;
+////#define MAX 1000
+////
+////int main()
+////{
+////	printf("%d\n", MAX);
+////	int arr[MAX];
+////
+////	return 0;
+////}
 //
-//int main()
-//{
-//	int a = MAX;
+////#define DEBUG_PRINT printf("file:%s\tline:%d\t date:%s\ttime:%s\n" , \
+////						__FILE__,__LINE__ , \
+////						__DATE__,__TIME__ ) 
+////续行符
 //
-//	return 0;
-//}
-
-
-int Max(int x, int y)
-{
-    return x > y ? x : y;
-}
-
-#define MAX(X,Y) ((X)>(Y)?(X):(Y))
-
-int main()
-{
-    int a = 3;
-    int b = 5;
-    //int c = MAX(a++, b++);
-    int c = Max(a++, b++);
-    //int c = ((a++)>(b++)?(a++):(b++));
-    //         3      5    
-    printf("%d\n", c);//6
-    printf("%d\n", a);//4
-    printf("%d\n", b);//7
-
-    return 0;
-}
+////#define MAX 1000;
+////
+////int main()
+////{
+////	int a = MAX;
+////
+////	return 0;
+////}
+//
+//
+////int Max(int x, int y)
+////{
+////    return x > y ? x : y;
+////}
+////
+////#define MAX(X,Y) ((X)>(Y)?(X):(Y))
+////
+////int main()
+////{
+////    INT_PTR a, b;
+////    int_ptr c, d;
+////
+////
+////    return 0;
+////}
