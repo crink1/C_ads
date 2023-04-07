@@ -1,28 +1,28 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-int main()
-{
-
-        FILE* pf;
-        //打开文件
-        char str[20] = { 0 };
-        int a = 0;
-        char b = 0;
-        int c = 0;
-        pf = fopen("text.txt", "r");
-        //文件操作
-        if (pf == NULL)
-        {
-            perror("fopen");
-        }
-       // fprintf(pf,"%d,%c,%d", 5, 'A', 6);
-        fscanf(pf,"%d,%c,%d", &a, &b, &c);
-        printf("%d %c %d", a, b, c);
-        //关闭文件
-        fclose(pf);
-       
-        return 0;
-}
+//int main()
+//{
+//
+//        FILE* pf;
+//        //打开文件
+//        char str[20] = { 0 };
+//        int a = 0;
+//        char b = 0;
+//        int c = 0;
+//        pf = fopen("text.txt", "r");
+//        //文件操作
+//        if (pf == NULL)
+//        {
+//            perror("fopen");
+//        }
+//       // fprintf(pf,"%d,%c,%d", 5, 'A', 6);
+//        fscanf(pf,"%d,%c,%d", &a, &b, &c);
+//        printf("%d %c %d", a, b, c);
+//        //关闭文件
+//        fclose(pf);
+//       
+//        return 0;
+//}
 
 //函数的实现 - 1
 //int Max(int x, int y)
