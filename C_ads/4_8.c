@@ -12,12 +12,12 @@
 
  //    return 0;
  //}
-#define MAX 100
- int main()
- {
-     printf("%d", MAX);
-#undef MAX
-     printf("%d", MAX);
-
-     return 0;
- }
+//#define MAX 100
+// int main()
+// {
+//     printf("%d", MAX);
+//#undef MAX
+//     printf("%d", MAX);
+//
+//     return 0;
+// }
